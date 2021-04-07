@@ -1,6 +1,6 @@
 {
   "name": "perdirjs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "根据权限判断元素的展示与否的自定义指令",
   "main": "index.js",
   "scripts": {
