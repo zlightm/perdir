@@ -14,12 +14,14 @@ const directiveObj = {
         console.error("请先配置权限判断函数！")
         return
       }
-      if (bind.modifiers.custom && bind.value[1]) {
-        if (bind.value[0] === "set") {
-          el.style = "pointer-events:none!important;opacity:0.4!important;"
-        }
-        if (bind.value[0] === "read") {
-          el.parentNode.removeChild(el)
+      if (bind.modifiers.custom ) {
+        if(bind.value[1]){
+          if (bind.value[0] === "set") {
+            el.style = "pointer-events:none!important;opacity:0.4!important;"
+          }
+          if (bind.value[0] === "read") {
+            el.parentNode.removeChild(el)
+          }
         }
       } else {
         if (bind.value[0] === "set" && directiveObj.isNoSet(bind.value[1])) {
